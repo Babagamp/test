@@ -2,12 +2,12 @@ program Config;
 
 uses
   Forms,
-  unit_config in 'unit_config.pas' {Form1};
+  unit_config in 'unit_config.pas' {FormConfig};
 
 {$R *.res}
 
 begin
   Application.Initialize;
-  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TFormConfig, FormConfig);
   Application.Run;
 end.

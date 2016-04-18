@@ -1,8 +1,8 @@
 object FormConfig: TFormConfig
   Left = 192
   Top = 124
-  Width = 615
-  Height = 439
+  Width = 234
+  Height = 220
   Caption = #1053#1072#1089#1090#1088#1086#1081#1082#1080
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -544,9 +544,81 @@ object FormConfig: TFormConfig
   OldCreateOrder = False
   PixelsPerInch = 96
   TextHeight = 13
+  object GroupBoxCash: TGroupBox
+    Left = 8
+    Top = 8
+    Width = 193
+    Height = 113
+    Caption = #1055#1088#1080#1085#1080#1084#1072#1077#1084#1099#1077' '#1082#1091#1087#1102#1088#1099
+    TabOrder = 0
+    object CheckBox10rub: TCheckBox
+      Left = 16
+      Top = 32
+      Width = 97
+      Height = 17
+      Caption = '10 '#1088#1091#1073'.'
+      TabOrder = 0
+    end
+    object CheckBox50rub: TCheckBox
+      Left = 16
+      Top = 56
+      Width = 97
+      Height = 17
+      Caption = '50 '#1088#1091#1073'.'
+      TabOrder = 1
+    end
+    object CheckBox100rub: TCheckBox
+      Left = 16
+      Top = 80
+      Width = 97
+      Height = 17
+      Caption = '100 '#1088#1091#1073'.'
+      TabOrder = 2
+    end
+    object CheckBox500rub: TCheckBox
+      Left = 112
+      Top = 32
+      Width = 73
+      Height = 17
+      Caption = '500 '#1088#1091#1073'.'
+      TabOrder = 3
+    end
+    object CheckBox1000rub: TCheckBox
+      Left = 112
+      Top = 56
+      Width = 73
+      Height = 17
+      Caption = '1000 '#1088#1091#1073'.'
+      TabOrder = 4
+    end
+    object CheckBox5000rub: TCheckBox
+      Left = 112
+      Top = 80
+      Width = 73
+      Height = 17
+      Caption = '5000 '#1088#1091#1073'.'
+      TabOrder = 5
+    end
+  end
+  object ButtonSave: TButton
+    Left = 8
+    Top = 144
+    Width = 75
+    Height = 25
+    Caption = #1057#1086#1093#1088#1072#1085#1080#1090#1100
+    TabOrder = 1
+  end
+  object ButtonClose: TButton
+    Left = 128
+    Top = 144
+    Width = 75
+    Height = 25
+    Caption = #1042#1099#1081#1090#1080
+    TabOrder = 2
+  end
   object XMLDocument1: TXMLDocument
-    Left = 32
-    Top = 24
+    Left = 216
+    Top = 136
     DOMVendorDesc = 'MSXML'
   end
 end
