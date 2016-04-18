@@ -3,3 +3,5 @@
 *.~dfm
 *.~pas
 *.~dpr
+/CCode/
+/CCode_new/
