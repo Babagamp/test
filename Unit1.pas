@@ -10,11 +10,8 @@ type
   TMainform = class(TForm)
     GBMainInput: TGroupBox;
     BtnPay1: TButton;
-    Label1: TLabel;
-    Label2: TLabel;
-    Label3: TLabel;
-    Label4: TLabel;
     procedure FormCreate(Sender: TObject);
+    procedure BtnPay1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -25,6 +22,8 @@ var
   Mainform: TMainform;
 
 implementation
+
+uses Unit2;
 
 {$R *.dfm}
 
@@ -40,13 +39,12 @@ begin
     x:=(MainForm.ClientWidth - GBMainInput.Width) div 2;
     GBMainInput.Left := x;
     GBMainInput.Top := y;
-    label1.Caption := IntToStr(MainForm.ClientHeight );
-    label2.Caption := IntToStr(MainForm.ClientWidth);
-    label3.Caption := IntToStr(GBMainInput.Height);
-    label4.Caption := IntToStr(GBMainInput.Width);
 
+end;
 
-
+procedure TMainform.BtnPay1Click(Sender: TObject);
+begin
+  FormPay.ShowModal;
 end;
 
 end.

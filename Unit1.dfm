@@ -1,6 +1,6 @@
 object Mainform: TMainform
-  Left = 219
-  Top = 138
+  Left = 93
+  Top = 87
   Width = 566
   Height = 480
   Caption = #1055#1083#1072#1090#1077#1078#1080' '#1079#1072' '#1090#1077#1093#1086#1089#1084#1086#1090#1088
@@ -552,34 +552,6 @@ object Mainform: TMainform
     Width = 329
     Height = 225
     TabOrder = 0
-    object Label1: TLabel
-      Left = 80
-      Top = 120
-      Width = 32
-      Height = 13
-      Caption = 'Label1'
-    end
-    object Label2: TLabel
-      Left = 176
-      Top = 120
-      Width = 32
-      Height = 13
-      Caption = 'Label2'
-    end
-    object Label3: TLabel
-      Left = 80
-      Top = 176
-      Width = 32
-      Height = 13
-      Caption = 'Label3'
-    end
-    object Label4: TLabel
-      Left = 176
-      Top = 176
-      Width = 32
-      Height = 13
-      Caption = 'Label4'
-    end
     object BtnPay1: TButton
       Left = 48
       Top = 40
@@ -587,6 +559,7 @@ object Mainform: TMainform
       Height = 41
       Caption = #1058#1077#1093#1086#1089#1084#1086#1090#1088' '#1083#1077#1075#1082#1086#1074#1086#1081' '#1084#1072#1096#1080#1085#1099
       TabOrder = 0
+      OnClick = BtnPay1Click
     end
   end
 end
