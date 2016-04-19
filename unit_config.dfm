@@ -1,8 +1,8 @@
 object FormConfig: TFormConfig
   Left = 192
   Top = 124
-  Width = 234
-  Height = 220
+  Width = 231
+  Height = 218
   Caption = #1053#1072#1089#1090#1088#1086#1081#1082#1080
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -615,10 +615,15 @@ object FormConfig: TFormConfig
     Height = 25
     Caption = #1042#1099#1081#1090#1080
     TabOrder = 2
+    OnClick = ButtonCloseClick
   end
   object XMLDocument1: TXMLDocument
-    Left = 216
-    Top = 136
+    Left = 40
+    Top = 120
     DOMVendorDesc = 'MSXML'
+  end
+  object SaveDialog1: TSaveDialog
+    Left = 8
+    Top = 120
   end
 end

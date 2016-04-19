@@ -18,6 +18,8 @@ type
     CheckBox5000rub: TCheckBox;
     ButtonSave: TButton;
     ButtonClose: TButton;
+    SaveDialog1: TSaveDialog;
+    procedure ButtonCloseClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -30,5 +32,10 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TFormConfig.ButtonCloseClick(Sender: TObject);
+begin
+ FormConfig.Close
+end;
 
 end.
