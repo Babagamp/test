@@ -607,6 +607,7 @@ object FormConfig: TFormConfig
     Height = 25
     Caption = #1057#1086#1093#1088#1072#1085#1080#1090#1100
     TabOrder = 1
+    OnClick = ButtonSaveClick
   end
   object ButtonClose: TButton
     Left = 128
@@ -617,7 +618,7 @@ object FormConfig: TFormConfig
     TabOrder = 2
     OnClick = ButtonCloseClick
   end
-  object XMLDocument1: TXMLDocument
+  object XMLDoc: TXMLDocument
     Left = 40
     Top = 120
     DOMVendorDesc = 'MSXML'
