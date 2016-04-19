@@ -8,7 +8,7 @@ uses
 
 type
   TFormConfig = class(TForm)
-    XMLDocument1: TXMLDocument;
+    XMLDoc: TXMLDocument;
     GroupBoxCash: TGroupBox;
     CheckBox10rub: TCheckBox;
     CheckBox50rub: TCheckBox;
@@ -20,6 +20,7 @@ type
     ButtonClose: TButton;
     SaveDialog1: TSaveDialog;
     procedure ButtonCloseClick(Sender: TObject);
+    procedure ButtonSaveClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -36,6 +37,12 @@ implementation
 procedure TFormConfig.ButtonCloseClick(Sender: TObject);
 begin
  FormConfig.Close
+end;
+
+procedure TFormConfig.ButtonSaveClick(Sender: TObject);
+begin
+   XMLDoc.Active := true;
+   XMLDoc.SaveToFile('config.xml');
 end;
 
 end.
