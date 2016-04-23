@@ -4,7 +4,8 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, xmldom, XMLIntf, msxmldom, XMLDoc, StdCtrls, ExtCtrls;
+  Dialogs, xmldom, XMLIntf, msxmldom, XMLDoc, StdCtrls, ExtCtrls, DB,
+  DBClient;
 
 type
   TFormConfig = class(TForm)
@@ -18,7 +19,6 @@ type
     CheckBox5000rub: TCheckBox;
     ButtonSave: TButton;
     ButtonClose: TButton;
-    SaveDialog1: TSaveDialog;
     procedure ButtonCloseClick(Sender: TObject);
     procedure ButtonSaveClick(Sender: TObject);
   private
@@ -40,9 +40,21 @@ begin
 end;
 
 procedure TFormConfig.ButtonSaveClick(Sender: TObject);
+   var i: integer;
 begin
    XMLDoc.Active := true;
+
+   XMLDoc.Version := '1.0';
+   XMLDoc.Encoding := 'windows-1251';
+   XMLDoc.AddChild('config_cash');
+   For i:=0 to GroupBoxCash.ControlCount - 1 do
+    Begin
+     XMLDoc.ChildNodes['config_cash'].AddChild(GroupBoxCash.Controls[i].Name);
+     XMLDoc.ChildNodes['config_cash'].ChildValues[GroupBoxCash.Controls[i].Name] := (GroupBoxCash.Controls[i] as TCheckBox).Checked;
+    end;
    XMLDoc.SaveToFile('config.xml');
+   XMLDoc.Active := false;
+   XMLDoc.CleanupInstance;
 end;
 
 end.

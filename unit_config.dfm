@@ -549,7 +549,7 @@ object FormConfig: TFormConfig
     Top = 8
     Width = 193
     Height = 113
-    Caption = #1055#1088#1080#1085#1080#1084#1072#1077#1084#1099#1077' '#1082#1091#1087#1102#1088#1099
+    Caption = #1056#1072#1079#1088#1077#1096#1077#1085#1085#1099#1077' '#1082#1091#1087#1102#1088#1099
     TabOrder = 0
     object CheckBox10rub: TCheckBox
       Left = 16
@@ -619,12 +619,8 @@ object FormConfig: TFormConfig
     OnClick = ButtonCloseClick
   end
   object XMLDoc: TXMLDocument
-    Left = 40
-    Top = 120
-    DOMVendorDesc = 'MSXML'
-  end
-  object SaveDialog1: TSaveDialog
     Left = 8
     Top = 120
+    DOMVendorDesc = 'MSXML'
   end
 end
