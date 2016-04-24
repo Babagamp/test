@@ -21,6 +21,7 @@ type
     ButtonClose: TButton;
     procedure ButtonCloseClick(Sender: TObject);
     procedure ButtonSaveClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -54,7 +55,22 @@ begin
     end;
    XMLDoc.SaveToFile('config.xml');
    XMLDoc.Active := false;
-   XMLDoc.CleanupInstance;
+   //XMLDoc.CleanupInstance;
+end;
+
+procedure TFormConfig.FormCreate(Sender: TObject);
+ var i: integer;
+
+begin
+  XMLDoc.Active := true;
+  XMLDoc.LoadFromFile('config.xml');
+  For i := 0 to XMLDoc.ChildNodes['config_cash'].ChildNodes.Count-1 do
+  Begin
+    (GroupBoxCash.Controls[i] as TCheckBox).Checked := XMLDoc.ChildNodes['config_cash'].ChildNodes[i].NodeValue;
+  End;
+  //ButtonClose.Caption := IntToStr(i);
+  XMLDoc.Active := false;
+  XMLDoc.CleanupInstance;
 end;
 
 end.
