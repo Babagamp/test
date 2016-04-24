@@ -66,7 +66,7 @@ begin
   XMLDoc.LoadFromFile('config.xml');
   For i := 0 to XMLDoc.ChildNodes['config_cash'].ChildNodes.Count-1 do
   Begin
-    (GroupBoxCash.Controls[i] as TCheckBox).Checked := XMLDoc.ChildNodes['config_cash'].ChildNodes[i].NodeValue;
+    (GroupBoxCash.Controls[i] as TCheckBox).Checked := XMLDoc.ChildNodes['config_cash'].ChildNodes[(GroupBoxCash.Controls[i] as TCheckBox).Name].NodeValue;
   End;
   //ButtonClose.Caption := IntToStr(i);
   XMLDoc.Active := false;
